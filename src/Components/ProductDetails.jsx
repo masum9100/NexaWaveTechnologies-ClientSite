@@ -20,7 +20,7 @@ const ProductDetails = () => {
         const findProduct = products?.find(product => product._id == _id);
         setProduct(findProduct);
     }, [_id, products]);
-    console.log(product)
+   
 
 
     return (

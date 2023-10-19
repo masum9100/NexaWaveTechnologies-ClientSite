@@ -40,32 +40,32 @@ const route = createBrowserRouter([
             {
                 path: "/microsoft",
                 element: <Microfoft></Microfoft>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                loader : ()=> fetch('http://localhost:5001/product'),
             },
             {
                 path: "/apple",
                 element: <Apple></Apple>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                loader : ()=> fetch('http://localhost:5001/product'),
             },
             {
                 path: "/dell",
                 element: <Dell></Dell>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                loader : ()=> fetch('http://localhost:5001/product'),
             },
             {
                 path: "/nokia",
                 element: <Nokia></Nokia>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                loader : ()=> fetch('http://localhost:5001/product'),
             },
             {
                 path: "/samsung",
                 element: <Samsung></Samsung>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                loader : ()=> fetch('http://localhost:5001/product'),
             },
             {
                 path: "/:_id",
                 element: <ProductDetails></ProductDetails>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                loader : ()=> fetch('http://localhost:5001/product'),
             }
             
             // {
