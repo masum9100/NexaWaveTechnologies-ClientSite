@@ -10,6 +10,7 @@ import Apple from '../Components/AllBrands/Apple';
 import Dell from '../Components/AllBrands/Dell';
 import Nokia from '../Components/AllBrands/Nokia';
 import Samsung from '../Components/AllBrands/Samsung';
+import ProductDetails from '../Components/ProductDetails';
 
 
 const route = createBrowserRouter([
@@ -33,28 +34,39 @@ const route = createBrowserRouter([
             },
             {
                 path: "/huawei",
-                element: <Huawei></Huawei>
+                element: <Huawei></Huawei>,
+                loader : ()=> fetch('http://localhost:5001/product')
             },
             {
                 path: "/microsoft",
-                element: <Microfoft></Microfoft>
+                element: <Microfoft></Microfoft>,
+                loader : ()=> fetch('http://localhost:5001/product')
             },
             {
                 path: "/apple",
-                element: <Apple></Apple>
+                element: <Apple></Apple>,
+                loader : ()=> fetch('http://localhost:5001/product')
             },
             {
                 path: "/dell",
-                element: <Dell></Dell>
+                element: <Dell></Dell>,
+                loader : ()=> fetch('http://localhost:5001/product')
             },
             {
                 path: "/nokia",
-                element: <Nokia></Nokia>
+                element: <Nokia></Nokia>,
+                loader : ()=> fetch('http://localhost:5001/product')
             },
             {
                 path: "/samsung",
-                element: <Samsung></Samsung>
+                element: <Samsung></Samsung>,
+                loader : ()=> fetch('http://localhost:5001/product')
             },
+            {
+                path: "/:_id",
+                element: <ProductDetails></ProductDetails>,
+                loader : ()=> fetch('http://localhost:5001/product')
+            }
             
             // {
             //     path: "/sign-in",
