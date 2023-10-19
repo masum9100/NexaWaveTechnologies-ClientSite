@@ -11,6 +11,8 @@ import Dell from '../Components/AllBrands/Dell';
 import Nokia from '../Components/AllBrands/Nokia';
 import Samsung from '../Components/AllBrands/Samsung';
 import ProductDetails from '../Components/ProductDetails';
+import Login from '../Components/Login';
+import Registration from '../Components/Registration';
 
 
 const route = createBrowserRouter([
@@ -66,6 +68,14 @@ const route = createBrowserRouter([
                 path: "/:_id",
                 element: <ProductDetails></ProductDetails>,
                 loader : ()=> fetch('http://localhost:5001/product'),
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/registration",
+                element: <Registration></Registration>
             }
             
             // {

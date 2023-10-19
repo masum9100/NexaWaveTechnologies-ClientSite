@@ -3,14 +3,31 @@ import Swal from 'sweetalert2';
 const SingleCard = ({ product }) => {
     const { name, brand, type, price, photo_url, description, ratings, _id } = product;
 
-    const handleAddCart = () => {
+    const handleAddCart = event => {
+        event.preventDefault()
+
+        const myCart = { name, brand, type, price, photo_url, description,ratings }
+        console.log(myCart)
         
-        Swal.fire({
-            title: 'Success!',
-            text: 'Product Added to Your Cart',
-            icon: 'success',
-            confirmButtonText: 'OKAY'
-        });
+        fetch('http://localhost:5001/product', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(myCart)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Product Added to Your Cart',
+                        icon: 'success',
+                        confirmButtonText: 'OKAY'
+                    })
+                }
+            })
         
     };
 

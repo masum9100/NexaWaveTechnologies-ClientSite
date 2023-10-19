@@ -26,7 +26,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <button className='bg-[#007BFF] text-white px-3 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>Log In</button>
+                <NavLink to={'/login'}><button className='bg-[#007BFF] text-white px-3 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>Log In</button></NavLink>
             </div>
         </div>
     );
