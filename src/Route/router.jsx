@@ -11,6 +11,7 @@ import Dell from '../Components/AllBrands/Dell';
 import Nokia from '../Components/AllBrands/Nokia';
 import Samsung from '../Components/AllBrands/Samsung';
 
+
 const route = createBrowserRouter([
     {
         path: "/",
@@ -54,6 +55,7 @@ const route = createBrowserRouter([
                 path: "/samsung",
                 element: <Samsung></Samsung>
             },
+            
             // {
             //     path: "/sign-in",
             //     element: <SignIn></SignIn>
