@@ -17,7 +17,7 @@ const AddProduct = () => {
         const newProduct = { name, brand, type, price, photo_url, description,ratings }
         console.log(newProduct)
 
-        fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product', {
+        fetch('https://agn10-server-site-6r94myr6m-masum9100.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

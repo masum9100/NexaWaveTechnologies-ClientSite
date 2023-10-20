@@ -9,7 +9,7 @@ const SingleCard = ({ product }) => {
         const myCart = { name, brand, type, price, photo_url, description,ratings }
         console.log(myCart)
         
-        fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/cart', {
+        fetch('https://agn10-server-site-6r94myr6m-masum9100.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
