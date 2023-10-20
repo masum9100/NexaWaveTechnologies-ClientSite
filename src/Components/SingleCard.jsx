@@ -9,7 +9,7 @@ const SingleCard = ({ product }) => {
         const myCart = { name, brand, type, price, photo_url, description,ratings }
         console.log(myCart)
         
-        fetch('http://localhost:5001/product', {
+        fetch('http://localhost:5001/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -26,7 +26,9 @@ const NokiaCard = ({ product }) => {
                 <NavLink to={`/${_id}`} className='bg-[#007BFF] text-white w-1/2 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>
                     <button >Details</button>
                     </NavLink>
-                    <button className='bg-[#007BFF] text-white w-1/2 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>Update</button>
+                    <NavLink to={`updateproduct/${_id}`} className='bg-[#007BFF] text-white w-1/2 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>
+                    <button >Update</button>
+                    </NavLink>
                 </div>
             </div>
         

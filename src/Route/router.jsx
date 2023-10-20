@@ -13,6 +13,9 @@ import Samsung from '../Components/AllBrands/Samsung';
 import ProductDetails from '../Components/ProductDetails';
 import Login from '../Components/Login';
 import Registration from '../Components/Registration';
+import PrivateRoute from '../Components/Hook/PrivateRoute';
+import UpdateProduct from '../Components/UpdateProduct';
+
 
 
 const route = createBrowserRouter([
@@ -23,51 +26,54 @@ const route = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                
+
             },
             {
                 path: "/add-product",
-                element: <AddProduct></AddProduct>,
+                element: <PrivateRoute>
+                    <AddProduct></AddProduct>
+                </PrivateRoute>,
             },
             {
                 path: "/my-cart",
-                element:  <MyCart></MyCart>,
-                
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/cart')
+
             },
             {
                 path: "/huawei",
-                element: <Huawei></Huawei>,
-                loader : ()=> fetch('http://localhost:5001/product')
+                element: <PrivateRoute><Huawei></Huawei></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/product')
             },
             {
                 path: "/microsoft",
-                element: <Microfoft></Microfoft>,
-                loader : ()=> fetch('http://localhost:5001/product'),
+                element: <PrivateRoute><Microfoft></Microfoft></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/product'),
             },
             {
                 path: "/apple",
-                element: <Apple></Apple>,
-                loader : ()=> fetch('http://localhost:5001/product'),
+                element: <PrivateRoute><Apple></Apple></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/product'),
             },
             {
                 path: "/dell",
                 element: <Dell></Dell>,
-                loader : ()=> fetch('http://localhost:5001/product'),
+                loader: () => fetch('http://localhost:5001/product'),
             },
             {
                 path: "/nokia",
-                element: <Nokia></Nokia>,
-                loader : ()=> fetch('http://localhost:5001/product'),
+                element: <PrivateRoute><Nokia></Nokia></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/product'),
             },
             {
                 path: "/samsung",
-                element: <Samsung></Samsung>,
-                loader : ()=> fetch('http://localhost:5001/product'),
+                element: <PrivateRoute><Samsung></Samsung></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/product'),
             },
             {
                 path: "/:_id",
-                element: <ProductDetails></ProductDetails>,
-                loader : ()=> fetch('http://localhost:5001/product'),
+                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
+                loader: () => fetch('http://localhost:5001/product'),
             },
             {
                 path: "/login",
@@ -76,24 +82,12 @@ const route = createBrowserRouter([
             {
                 path: "/registration",
                 element: <Registration></Registration>
+            },
+            {
+                path: "updateproduct/:id",
+                element: <UpdateProduct></UpdateProduct>,
+                loader: ({params})=> fetch(`http://localhost:5001/product/${params.id}`)
             }
-            
-            // {
-            //     path: "/sign-in",
-            //     element: <SignIn></SignIn>
-            // },
-            // {
-            //     path: "/sign-up",
-            //     element: <SignUp></SignUp>
-            // },
-            // {
-            //     path: "/:id",
-            //     element: <PrivateRoute>
-            //         <ServiceDetails></ServiceDetails>
-            //     </PrivateRoute>,
-            //     loader: () => fetch('/data.json')
-            // },
-
 
         ]
     }
