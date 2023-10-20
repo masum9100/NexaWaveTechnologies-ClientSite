@@ -30,6 +30,8 @@ const CartCard = ({ cart }) => {
                         'Product Removed from Your Cart',
                         'success'
                       )
+                      
+                      
                 }
               })
             }

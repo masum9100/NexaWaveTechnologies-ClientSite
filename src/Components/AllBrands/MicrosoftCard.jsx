@@ -6,6 +6,7 @@ const MicrosoftCard = ({ product }) => {
     if (brand.toLowerCase() !== 'microsoft') {
         return null;
     }
+    
 
     return (
         
@@ -26,9 +27,7 @@ const MicrosoftCard = ({ product }) => {
                 <NavLink to={`/${_id}`} className='bg-[#007BFF] text-white w-1/2 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>
                     <button >Details</button>
                     </NavLink>
-                    <NavLink to={`updateproduct/${_id}`} className='bg-[#007BFF] text-white w-1/2 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>
-                    <button >Update</button>
-                    </NavLink>
+                    <button className='bg-[#007BFF] text-white w-1/2 py-2 rounded-lg hover:bg-white hover:text-[#007BFF]'>Update</button>
                 </div>
             </div>
         

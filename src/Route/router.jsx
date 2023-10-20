@@ -14,7 +14,7 @@ import ProductDetails from '../Components/ProductDetails';
 import Login from '../Components/Login';
 import Registration from '../Components/Registration';
 import PrivateRoute from '../Components/Hook/PrivateRoute';
-import UpdateProduct from '../Components/UpdateProduct';
+
 
 
 
@@ -83,12 +83,6 @@ const route = createBrowserRouter([
                 path: "/registration",
                 element: <Registration></Registration>
             },
-            {
-                path: "updateproduct/:id",
-                element: <UpdateProduct></UpdateProduct>,
-                loader: ({params})=> fetch(`http://localhost:5001/product/${params.id}`)
-            }
-
         ]
     }
 ])
