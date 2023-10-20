@@ -37,43 +37,43 @@ const route = createBrowserRouter([
             {
                 path: "/my-cart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/cart')
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/cart')
 
             },
             {
                 path: "/huawei",
                 element: <PrivateRoute><Huawei></Huawei></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/product')
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product')
             },
             {
                 path: "/microsoft",
                 element: <PrivateRoute><Microfoft></Microfoft></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/product'),
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product'),
             },
             {
                 path: "/apple",
                 element: <PrivateRoute><Apple></Apple></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/product'),
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product'),
             },
             {
                 path: "/dell",
                 element: <Dell></Dell>,
-                loader: () => fetch('http://localhost:5001/product'),
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product'),
             },
             {
                 path: "/nokia",
                 element: <PrivateRoute><Nokia></Nokia></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/product'),
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product'),
             },
             {
                 path: "/samsung",
                 element: <PrivateRoute><Samsung></Samsung></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/product'),
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product'),
             },
             {
                 path: "/:_id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: () => fetch('http://localhost:5001/product'),
+                loader: () => fetch('https://agn10-server-site-73gurqgye-masum9100.vercel.app/product'),
             },
             {
                 path: "/login",
